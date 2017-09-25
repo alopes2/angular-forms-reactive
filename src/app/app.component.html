@@ -13,7 +13,7 @@
             <span
               *ngIf="!signupForm.get('userData.username').valid && signupForm.get('userData.username').touched"
               class="help-block">
-              <span *ngIf="signupForm.get('userData.username').errors['nameIsForbidden']">
+              <span *ngIf="signupForm.get('userData.username').hasError('nameIsForbidden')">
                 Name is invalid!
               </span>
               <span *ngIf="signupForm.get('userData.username').errors['required']">
